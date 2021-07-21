@@ -90,3 +90,5 @@ sw.*
 *.swp
 package-lock.json
 package-lock.json
+
+docker-compose*
