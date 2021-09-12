@@ -4,7 +4,11 @@ const app = express()
 
 
 mongoose
-    .connect('mongodb://root:pass12345@mongo:27017/?authSource=admin')
+    .connect('mongodb://root:pass12345@mongo:27017/?authSource=admin', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }
+    )
     .then(()=> console.log('connected'))
     .catch((error) => console.error(error));
 
