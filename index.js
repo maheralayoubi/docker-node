@@ -4,7 +4,7 @@ const app = express()
 
 
 mongoose
-    .connect('mongodb://root:pass12345@mongo:27017/?authSource=admin', {
+    .connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}?authSource=admin`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         }
